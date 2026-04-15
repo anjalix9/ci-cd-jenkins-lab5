@@ -1,10 +1,10 @@
 FROM node:18
 
 WORKDIR /app
-COPY mern-devops-app/frontend/package.json .
+COPY frontend/package.json .
 RUN npm install
 
-COPY mern-devops-app/frontend .
+COPY frontend .
 EXPOSE 3000
 
 CMD ["npm", "start"]
